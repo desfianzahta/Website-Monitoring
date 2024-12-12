@@ -1,0 +1,1574 @@
+<!-- 
+Responsive HTML Table With Pure CSS - Web Design/UI Design
+
+Code written by:
+👨🏻‍⚕️ Coding Design (Jeet Saru)
+-- file:///C:/xampp/htdocs/webtabel/index.html
+> You can do whatever you want with the code. However if you love my content, you can **SUBSCRIBED** my YouTube Channel.
+
+🌎link: www.youtube.com/codingdesign 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <h1>Welcome To Web Monitoring</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <img src="images/search.png" alt="">
+            </div>
+        </section>
+        
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> No <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Name <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Ip Address <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Area <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> LastDown <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> DownTime <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Avaibility <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> #<span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td> 1 </td>
+                        <td> SW.COR.DISTRI.PAKNING </td>
+                        <td> 10.52.231.1 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 1h 30m</td>
+                        <td> 99.988%</td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="none" class="none" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('DONE!');
+                            }
+                          </script>
+                          
+                          <!-- tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> SW.HSSE.PAKNING </td>
+                        <td> 10.52.231.126 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 10m </td>
+                        <td> 99.988% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('DONE!');
+                            }
+                          </script>
+                          
+                          <!-- tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> SW.WORKSHOP.PAKNING </td>
+                        <td> 10.52.231.130 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 5m </td>
+                        <td> 99.988% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('Anda memilih OK!');
+                            }
+                          </script>
+                          
+                          <!-- tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                    </tr>
+                    <tr>
+                        <td> 4 </td>
+                        <td> SW.CIVIL.PAKNING </td>
+                        <td> 10.52.231.129 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 5m </td>
+                        <td> 99.988% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('Anda memilih OK!');
+                            }
+                          </script>
+                          
+                          <!--tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                    </tr>
+                    <tr>
+                        <td> 5 </td>
+                        <td> SW.MCR.PAKNING </td>
+                        <td> 10.52.231.127 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 5m </td>
+                        <td> 99.954% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('Anda memilih OK!');
+                            }
+                          </script>
+                          
+                          <!--tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                    </tr>
+                    <tr>
+                        <td> 6 </td>
+                        <td> SW.PUMP.HS.PAKNING </td>
+                        <td> 10.52.231.139 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 20m </td>
+                        <td> 99.988% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('Anda memilih OK!');
+                            }
+                          </script>
+                          
+                          <!-- tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td> 
+                    </tr>
+                    <tr>
+                        <td> 7 </td>
+                        <td> SW.INSTRU.HS.PAKNING </td>
+                        <td> 10.52.231.117 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 5m </td>
+                        <td> 99.988% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('Anda memilih OK!');
+                            }
+                          </script>
+                          
+                          <!--tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                    </tr>
+                    <tr>
+                        <td> 8 </td>
+                        <td> SW.MECCDUS.PAKNING </td>
+                        <td> 10.52.231.138 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 5m </td>
+                        <td> 99.988% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('Anda memilih OK!');
+                            }
+                          </script>
+                          
+                          <!--tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                    </tr>
+                    <tr>
+                        <td> 9 </td>
+                        <td> SW.PRODUK.PAKNING </td>
+                        <td> 10.52.231.123 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 5m </td>
+                        <td> 99.977% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          
+                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                          <style>
+                            .popup-container {
+                              display: none; /* Default tidak terlihat */
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              justify-content: center;
+                              align-items: center;
+                            }
+                          
+                            .popup-content {
+                              background-color: #fff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              text-align: center;
+                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                          
+                            .popup-content h2 {
+                              margin: 10px 0 5px 0;
+                              font-size: 24px;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content p {
+                              font-size: 16px;
+                              margin: 10px 0;
+                              color: #4a4a4a;
+                            }
+                          
+                            .popup-content img {
+                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                              margin-bottom: 10px;
+                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                            }
+                          
+                            .popup-content button {
+                              margin: 10px 5px;
+                              padding: 10px 20px;
+                              border: none;
+                              border-radius: 5px;
+                              cursor: pointer;
+                              font-size: 16px;
+                            }
+                          
+                            .popup-content button:first-child {
+                              background-color: #ccc;
+                            }
+                          
+                            .popup-content button:last-child {
+                              background-color: #007bff;
+                              color: white;
+                            }
+                          
+                            .popup-content button:hover {
+                              opacity: 0.9;
+                            }
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('Anda memilih OK!');
+                            }
+                          </script>
+                          
+                          <!--tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                    </tr>
+                    <tr>
+                        <td> 10 </td>
+                        <td> SW.POWERS.PAKNING </td>
+                        <td> 10.52.231.126 </td>
+                        <td> Pakning </td>
+                        <td> Up </td>
+                        <td> 2024/11/05 18:30:38 </td>
+                        <td> 5m </td>
+                        <td> 99.792% </td>
+                        <td><!-- HTML: Pop-up structure -->
+                          <div id="popup" class="popup-container">
+                            <div class="popup-content">
+                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                              <h2>Info!</h2>
+                              <p>Mau cek manual?</p>
+                              <button onclick="closePopup()">Cancel</button>
+                              <button onclick="confirmAction()">OK</button>
+                            </div>
+                          </div>
+                          </style>
+                          
+                          <!-- JavaScript: Interaksi dengan pop-up -->
+                          <script>
+                            function openPopup() {
+                              document.getElementById('popup').style.display = 'flex';
+                            }
+                          
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                            }
+                          
+                            function confirmAction() {
+                              closePopup();
+                              alert('Anda memilih OK!');
+                            }
+                            
+                          </script>
+                          
+                          <!--tombol untuk membuka pop-up -->
+                          <button onclick="openPopup()">
+                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                          </button>
+                          </td>
+                          <tr>
+                            <td> 11 </td>
+                            <td> SW.HSSE.PAKNING </td>
+                            <td> 10.52.231.126 </td>
+                            <td> Pakning </td>
+                            <td> Up </td>
+                            <td> 2024/11/05 18:30:38 </td>
+                            <td> 10m </td>
+                            <td> 99.988% </td>
+                            <td><!-- HTML: Pop-up structure -->
+                              <div id="popup" class="popup-container">
+                                <div class="popup-content">
+                                  <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                                  <h2>Info!</h2>
+                                  <p>Mau cek manual?</p>
+                                  <button onclick="closePopup()">Cancel</button>
+                                  <button onclick="confirmAction()">OK</button>
+                                </div>
+                              </div>
+                              
+                              <!-- CSS: Styling untuk pop-up dengan gambar -->
+                              <style>
+                                .popup-container {
+                                  display: none; /* Default tidak terlihat */
+                                  position: fixed;
+                                  top: 0;
+                                  left: 0;
+                                  width: 100%;
+                                  height: 100%;
+                                  background-color: rgba(0, 0, 0, 0.5);
+                                  justify-content: center;
+                                  align-items: center;
+                                }
+                              
+                                .popup-content {
+                                  background-color: #fff;
+                                  padding: 20px;
+                                  border-radius: 8px;
+                                  text-align: center;
+                                  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                                }
+                              
+                                .popup-content h2 {
+                                  margin: 10px 0 5px 0;
+                                  font-size: 24px;
+                                  color: #4a4a4a;
+                                }
+                              
+                                .popup-content p {
+                                  font-size: 16px;
+                                  margin: 10px 0;
+                                  color: #4a4a4a;
+                                }
+                              
+                                .popup-content img {
+                                  max-width: 100px; /* Sesuaikan ukuran gambar */
+                                  margin-bottom: 10px;
+                                  border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                                }
+                              
+                                .popup-content button {
+                                  margin: 10px 5px;
+                                  padding: 10px 20px;
+                                  border: none;
+                                  border-radius: 5px;
+                                  cursor: pointer;
+                                  font-size: 16px;
+                                }
+                              
+                                .popup-content button:first-child {
+                                  background-color: #ccc;
+                                }
+                              
+                                .popup-content button:last-child {
+                                  background-color: #007bff;
+                                  color: white;
+                                }
+                              
+                                .popup-content button:hover {
+                                  opacity: 0.9;
+                                }
+                              </style>
+                              
+                              <!-- JavaScript: Interaksi dengan pop-up -->
+                              <script>
+                                function openPopup() {
+                                  document.getElementById('popup').style.display = 'flex';
+                                }
+                              
+                                function closePopup() {
+                                  document.getElementById('popup').style.display = 'none';
+                                }
+                              
+                                function confirmAction() {
+                                  closePopup();
+                                  alert('Anda memilih OK!');
+                                }
+                              </script>
+                              
+                              <!-- tombol untuk membuka pop-up -->
+                              <button onclick="openPopup()">
+                                <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                              </button>
+                              </td>
+                              <tr>
+                                <td> 12 </td>
+                                <td> SW.HSSE.PAKNING </td>
+                                <td> 10.52.231.126 </td>
+                                <td> Pakning </td>
+                                <td> Up </td>
+                                <td> 2024/11/05 18:30:38 </td>
+                                <td> 10m </td>
+                                <td> 99.988% </td>
+                                <td><!-- HTML: Pop-up structure -->
+                                  <div id="popup" class="popup-container">
+                                    <div class="popup-content">
+                                      <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                                      <h2>Info!</h2>
+                                      <p>Mau cek manual?</p>
+                                      <button onclick="closePopup()">Cancel</button>
+                                      <button onclick="confirmAction()">OK</button>
+                                    </div>
+                                  </div>
+                                  
+                                  <!-- CSS: Styling untuk pop-up dengan gambar -->
+                                  <style>
+                                    .popup-container {
+                                      display: none; /* Default tidak terlihat */
+                                      position: fixed;
+                                      top: 0;
+                                      left: 0;
+                                      width: 100%;
+                                      height: 100%;
+                                      background-color: rgba(0, 0, 0, 0.5);
+                                      justify-content: center;
+                                      align-items: center;
+                                    }
+                                  
+                                    .popup-content {
+                                      background-color: #fff;
+                                      padding: 20px;
+                                      border-radius: 8px;
+                                      text-align: center;
+                                      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                                    }
+                                  
+                                    .popup-content h2 {
+                                      margin: 10px 0 5px 0;
+                                      font-size: 24px;
+                                      color: #4a4a4a;
+                                    }
+                                  
+                                    .popup-content p {
+                                      font-size: 16px;
+                                      margin: 10px 0;
+                                      color: #4a4a4a;
+                                    }
+                                  
+                                    .popup-content img {
+                                      max-width: 100px; /* Sesuaikan ukuran gambar */
+                                      margin-bottom: 10px;
+                                      border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                                    }
+                                  
+                                    .popup-content button {
+                                      margin: 10px 5px;
+                                      padding: 10px 20px;
+                                      border: none;
+                                      border-radius: 5px;
+                                      cursor: pointer;
+                                      font-size: 16px;
+                                    }
+                                  
+                                    .popup-content button:first-child {
+                                      background-color: #ccc;
+                                    }
+                                  
+                                    .popup-content button:last-child {
+                                      background-color: #007bff;
+                                      color: white;
+                                    }
+                                  
+                                    .popup-content button:hover {
+                                      opacity: 0.9;
+                                    }
+                                  </style>
+                                  
+                                  <!-- JavaScript: Interaksi dengan pop-up -->
+                                  <script>
+                                    function openPopup() {
+                                      document.getElementById('popup').style.display = 'flex';
+                                    }
+                                  
+                                    function closePopup() {
+                                      document.getElementById('popup').style.display = 'none';
+                                    }
+                                  
+                                    function confirmAction() {
+                                      closePopup();
+                                      alert('Anda memilih OK!');
+                                    }
+                                  </script>
+                                  
+                                  <!-- tombol untuk membuka pop-up -->
+                                  <button onclick="openPopup()">
+                                    <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                                  </button>
+                                  </td>
+                                  <tr>
+                                    <td> 13 </td>
+                                    <td> SW.HSSE.PAKNING </td>
+                                    <td> 10.52.231.126 </td>
+                                    <td> Pakning </td>
+                                    <td> Up </td>
+                                    <td> 2024/11/05 18:30:38 </td>
+                                    <td> 10m </td>
+                                    <td> 99.988% </td>
+                                    <td><!-- HTML: Pop-up structure -->
+                                      <div id="popup" class="popup-container">
+                                        <div class="popup-content">
+                                          <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                                          <h2>Info!</h2>
+                                          <p>Mau cek manual?</p>
+                                          <button onclick="closePopup()">Cancel</button>
+                                          <button onclick="confirmAction()">OK</button>
+                                        </div>
+                                      </div>
+                                      
+                                      <!-- CSS: Styling untuk pop-up dengan gambar -->
+                                      <style>
+                                        .popup-container {
+                                          display: none; /* Default tidak terlihat */
+                                          position: fixed;
+                                          top: 0;
+                                          left: 0;
+                                          width: 100%;
+                                          height: 100%;
+                                          background-color: rgba(0, 0, 0, 0.5);
+                                          justify-content: center;
+                                          align-items: center;
+                                        }
+                                      
+                                        .popup-content {
+                                          background-color: #fff;
+                                          padding: 20px;
+                                          border-radius: 8px;
+                                          text-align: center;
+                                          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                                        }
+                                      
+                                        .popup-content h2 {
+                                          margin: 10px 0 5px 0;
+                                          font-size: 24px;
+                                          color: #4a4a4a;
+                                        }
+                                      
+                                        .popup-content p {
+                                          font-size: 16px;
+                                          margin: 10px 0;
+                                          color: #4a4a4a;
+                                        }
+                                      
+                                        .popup-content img {
+                                          max-width: 100px; /* Sesuaikan ukuran gambar */
+                                          margin-bottom: 10px;
+                                          border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                                        }
+                                      
+                                        .popup-content button {
+                                          margin: 10px 5px;
+                                          padding: 10px 20px;
+                                          border: none;
+                                          border-radius: 5px;
+                                          cursor: pointer;
+                                          font-size: 16px;
+                                        }
+                                      
+                                        .popup-content button:first-child {
+                                          background-color: #ccc;
+                                        }
+                                      
+                                        .popup-content button:last-child {
+                                          background-color: #007bff;
+                                          color: white;
+                                        }
+                                      
+                                        .popup-content button:hover {
+                                          opacity: 0.9;
+                                        }
+                                      </style>
+                                      
+                                      <!-- JavaScript: Interaksi dengan pop-up -->
+                                      <script>
+                                        function openPopup() {
+                                          document.getElementById('popup').style.display = 'flex';
+                                        }
+                                      
+                                        function closePopup() {
+                                          document.getElementById('popup').style.display = 'none';
+                                        }
+                                      
+                                        function confirmAction() {
+                                          closePopup();
+                                          alert('Anda memilih OK!');
+                                        }
+                                      </script>
+                                      
+                                      <!-- tombol untuk membuka pop-up -->
+                                      <button onclick="openPopup()">
+                                        <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                                      </button>
+                                      </td>
+                                      <tr>
+                                        <td> 14 </td>
+                                        <td> SW.HSSE.PAKNING </td>
+                                        <td> 10.52.231.126 </td>
+                                        <td> Pakning </td>
+                                        <td> Up </td>
+                                        <td> 2024/11/05 18:30:38 </td>
+                                        <td> 10m </td>
+                                        <td> 99.988% </td>
+                                        <td><!-- HTML: Pop-up structure -->
+                                          <div id="popup" class="popup-container">
+                                            <div class="popup-content">
+                                              <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                                              <h2>Info!</h2>
+                                              <p>Mau cek manual?</p>
+                                              <button onclick="closePopup()">Cancel</button>
+                                              <button onclick="confirmAction()">OK</button>
+                                            </div>
+                                          </div>
+                                          
+                                          <!-- CSS: Styling untuk pop-up dengan gambar -->
+                                          <style>
+                                            .popup-container {
+                                              display: none; /* Default tidak terlihat */
+                                              position: fixed;
+                                              top: 0;
+                                              left: 0;
+                                              width: 100%;
+                                              height: 100%;
+                                              background-color: rgba(0, 0, 0, 0.5);
+                                              justify-content: center;
+                                              align-items: center;
+                                            }
+                                          
+                                            .popup-content {
+                                              background-color: #fff;
+                                              padding: 20px;
+                                              border-radius: 8px;
+                                              text-align: center;
+                                              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                                            }
+                                          
+                                            .popup-content h2 {
+                                              margin: 10px 0 5px 0;
+                                              font-size: 24px;
+                                              color: #4a4a4a;
+                                            }
+                                          
+                                            .popup-content p {
+                                              font-size: 16px;
+                                              margin: 10px 0;
+                                              color: #4a4a4a;
+                                            }
+                                          
+                                            .popup-content img {
+                                              max-width: 100px; /* Sesuaikan ukuran gambar */
+                                              margin-bottom: 10px;
+                                              border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                                            }
+                                          
+                                            .popup-content button {
+                                              margin: 10px 5px;
+                                              padding: 10px 20px;
+                                              border: none;
+                                              border-radius: 5px;
+                                              cursor: pointer;
+                                              font-size: 16px;
+                                            }
+                                          
+                                            .popup-content button:first-child {
+                                              background-color: #ccc;
+                                            }
+                                          
+                                            .popup-content button:last-child {
+                                              background-color: #007bff;
+                                              color: white;
+                                            }
+                                          
+                                            .popup-content button:hover {
+                                              opacity: 0.9;
+                                            }
+                                          </style>
+                                          
+                                          <!-- JavaScript: Interaksi dengan pop-up -->
+                                          <script>
+                                            function openPopup() {
+                                              document.getElementById('popup').style.display = 'flex';
+                                            }
+                                          
+                                            function closePopup() {
+                                              document.getElementById('popup').style.display = 'none';
+                                            }
+                                          
+                                            function confirmAction() {
+                                              closePopup();
+                                              alert('Anda memilih OK!');
+                                            }
+                                          </script>
+                                          
+                                          <!-- tombol untuk membuka pop-up -->
+                                          <button onclick="openPopup()">
+                                            <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                                          </button>
+                                          </td>
+                                          <tr>
+                                            <td> 15 </td>
+                                            <td> SW.HSSE.PAKNING </td>
+                                            <td> 10.52.231.126 </td>
+                                            <td> Pakning </td>
+                                            <td> Up </td>
+                                            <td> 2024/11/05 18:30:38 </td>
+                                            <td> 10m </td>
+                                            <td> 99.988% </td>
+                                            <td><!-- HTML: Pop-up structure -->
+                                              <div id="popup" class="popup-container">
+                                                <div class="popup-content">
+                                                  <img src="images/tandaseru.png" alt="Informasi" class="popup-image" style="width: 100px; height: auto;" />
+                                                  <h2>Info!</h2>
+                                                  <p>Mau cek manual?</p>
+                                                  <button onclick="closePopup()">Cancel</button>
+                                                  <button onclick="confirmAction()">OK</button>
+                                                </div>
+                                              </div>
+                                              
+                                              <!-- CSS: Styling untuk pop-up dengan gambar -->
+                                              <style>
+                                                .popup-container {
+                                                  display: none; /* Default tidak terlihat */
+                                                  position: fixed;
+                                                  top: 0;
+                                                  left: 0;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  background-color: rgba(0, 0, 0, 0.5);
+                                                  justify-content: center;
+                                                  align-items: center;
+                                                }
+                                              
+                                                .popup-content {
+                                                  background-color: #fff;
+                                                  padding: 20px;
+                                                  border-radius: 8px;
+                                                  text-align: center;
+                                                  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                                                }
+                                              
+                                                .popup-content h2 {
+                                                  margin: 10px 0 5px 0;
+                                                  font-size: 24px;
+                                                  color: #4a4a4a;
+                                                }
+                                              
+                                                .popup-content p {
+                                                  font-size: 16px;
+                                                  margin: 10px 0;
+                                                  color: #4a4a4a;
+                                                }
+                                              
+                                                .popup-content img {
+                                                  max-width: 100px; /* Sesuaikan ukuran gambar */
+                                                  margin-bottom: 10px;
+                                                  border-radius: 8px; /* Opsional: untuk gaya lebih halus */
+                                                }
+                                              
+                                                .popup-content button {
+                                                  margin: 10px 5px;
+                                                  padding: 10px 20px;
+                                                  border: none;
+                                                  border-radius: 5px;
+                                                  cursor: pointer;
+                                                  font-size: 16px;
+                                                }
+                                              
+                                                .popup-content button:first-child {
+                                                  background-color: #ccc;
+                                                }
+                                              
+                                                .popup-content button:last-child {
+                                                  background-color: #007bff;
+                                                  color: white;
+                                                }
+                                              
+                                                .popup-content button:hover {
+                                                  opacity: 0.9;
+                                                }
+                                              </style>
+                                              
+                                              <!-- JavaScript: Interaksi dengan pop-up -->
+                                              <script>
+                                                function openPopup() {
+                                                  document.getElementById('popup').style.display = 'flex';
+                                                }
+                                              
+                                                function closePopup() {
+                                                  document.getElementById('popup').style.display = 'none';
+                                                }
+                                              
+                                                function confirmAction() {
+                                                  closePopup();
+                                                  alert('Anda memilih OK!');
+                                                }
+                                              </script>
+                                              
+                                              <!-- tombol untuk membuka pop-up -->
+                                              <button onclick="openPopup()">
+                                                <img src="images/bot.jpg" alt="Informasi" class="popup-image" style="width: 38px; height: auto;" />
+                                              </button>
+                                              </td>
+                                            
+                                        </tr>
+                                    </tr>
+                                </tr>
+                            </tr>
+                        </tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>
